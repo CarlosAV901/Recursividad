@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
  * @author aguiv
  */
 public class factorialSuma {
-    private int n;
+    private int n; //declaracion de las variables de instancia 
     private double r;
     
     public factorialSuma(int n){
-        setN(n);
+        setN(n); //inicializando la variable en el constructor
         r = 1;
     }
 
@@ -24,7 +24,7 @@ public class factorialSuma {
     }
 
     public void setN(int n) {
-        if (n>=0) {
+        if (n>=0) { //validando n
             this.n = n;
         }
     }
@@ -34,11 +34,11 @@ public class factorialSuma {
     }
 
     public void setR(double r) {
-        this.r = r;
+        this.r = r; 
     }
 
     
-    public void facIterativo(){             
+    public void facIterativo(){ //problema con metodo iterativo    
         double factorial = 1;
         double r = 0;
         for (double i = 1; i <= n; i++) {           
@@ -48,7 +48,7 @@ public class factorialSuma {
         JOptionPane.showMessageDialog(null, "La suma es: " + r);
     }
 
-    private double fact(int n){
+    private double fact(int n){ //factorial para resolver el metodo recursivo 
         if (n == 1 || n == 0) {
             //caso base
             return 1;
@@ -58,7 +58,7 @@ public class factorialSuma {
         }
     }
 
-    public double facRecusrsivo(int n){
+    public double facRecusrsivo(int n){ //problema resuelto con metodo recursivo 
         if (n == 1) {
             //caso base
             return 1;

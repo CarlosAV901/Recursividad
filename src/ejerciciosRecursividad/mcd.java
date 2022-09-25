@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
  * @author aguiv
  */
 public class mcd {
-    private int a;
+    private int a; //declarando las dos variables de instancia
     private int b;
 
     public mcd(int a, int b) {
-        setA(a);
+        setA(a); //constructor 
         setB(b);
     }
 
@@ -24,7 +24,7 @@ public class mcd {
     }
 
     public void setA(int a) {
-        this.a = a >= 0 ? a : 0;
+        this.a = a >= 0 ? a : 0; //validando n
     }
 
     public int getB() {
@@ -35,7 +35,7 @@ public class mcd {
         this.b = b >= 0 ? b : 0;
     }
 
-    public void mcdIterativo() {
+    public void mcdIterativo() { //resolucion del problema de manera iterativa
         int aux = 0;
         while (b != 0) {
             aux = b;
@@ -45,11 +45,11 @@ public class mcd {
         JOptionPane.showMessageDialog(null, "El MCD es: " + aux);
     }
 
-    public int recursivo() {
+    public int recursivo() { //retorno del metodo mcdRecursivo
         return mcdRecursivo(a, b);
     }
 
-    private int mcdRecursivo(int a, int b) {
+    private int mcdRecursivo(int a, int b) { //resolucion del problema de manera recursiva
         if (b == 0) {
             return a;
         } else {

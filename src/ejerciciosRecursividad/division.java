@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
  * @author aguiv
  */
 public class division {
-    int n;
+    private int n; //declaracion de variable de instancia
     
-    public division(int n){
+    public division(int n){//constructor
         setN(n);
     }
     
@@ -21,7 +21,7 @@ public class division {
         return n;
     }
     
-    public void setN(int n){
+    public void setN(int n){//validacion de n
         //this.n = n>=0?n:0;
         if (n>=0) {
             this.n = n;
@@ -31,7 +31,7 @@ public class division {
     }
     
     //Metodo iterativo
-    public void divIterativo(){
+    public void divIterativo(){//problema iterativo
         double r = 0;
         for (double i = 1; i <= n; i++) {
             r += 1/i;
@@ -44,7 +44,7 @@ public class division {
     }
     
     //Metodo Recursivo
-    public double divRecursivo(double n){     
+    public double divRecursivo(double n){  //problema recursivo   
         if (n==1) {
             return 1;
         }else{

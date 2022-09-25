@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author aguiv
  */
 public class sumaNum {
-    private int n;
+    private int n; //declaracion de la variable de instancia 
     
     public sumaNum(int n){
         setN(n);
@@ -22,10 +22,10 @@ public class sumaNum {
     }
 
     public void setN(int n) {
-        this.n = (n>=1)?n:1;
+        this.n = (n>=1)?n:1; //validando la variable n
     }
     
-    public void sumIterativo(){
+    public void sumIterativo(){ //resolucion de problema de manera iterativa
         int r = 0;
         for (int i = 1; i <= n; i++) {
             r = r + i;                
@@ -33,7 +33,7 @@ public class sumaNum {
         JOptionPane.showMessageDialog(null, "La suma es: " + r);  
     }
     
-    public int sumRecursivo(int n){
+    public int sumRecursivo(int n){ //resolucion del problema de manera recursiva
         if (n == 1) {
             return 1;
         }else{
